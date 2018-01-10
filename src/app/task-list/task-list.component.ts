@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from './shared/task.model';
 
 // To replace with server data
-import { MOCKS } from '../../mock-tasks';
+import { TaskService } from './services/task.service';
 
 @Component({
   selector: 'app-task-list',
@@ -11,11 +11,16 @@ import { MOCKS } from '../../mock-tasks';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  tasks = MOCKS.slice();
+  tasks: Task[];
 
-  constructor() { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
+    this.getTasks();
+  }
+
+  getTasks(): void {
+    this.tasks = this.taskService.getTasks();
   }
 
 }
