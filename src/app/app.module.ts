@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { TaskComponent } from './task/task.component';
 import { TrackerComponent } from './tracker/tracker.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDetailComponent } from './task-list/task-detail/task-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent,
-    TrackerComponent
+    TrackerComponent,
+    TaskListComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule

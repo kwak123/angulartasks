@@ -1,0 +1,6 @@
+<div *ngIf="task">
+  <div class="task__container" (click)="onCompleted()">
+    <p>{{ task.name }}</p>
+    <p>{{ task.completed }}</p>
+  </div>
+</div>
