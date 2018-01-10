@@ -7,18 +7,21 @@ import { TrackerComponent } from './tracker/tracker.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDetailComponent } from './task-list/task-detail/task-detail.component';
 
+import { TaskService } from './task-list/services/task.service';
+import { TaskAddComponent } from './task-list/task-add/task-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrackerComponent,
     TaskListComponent,
-    TaskDetailComponent
+    TaskDetailComponent,
+    TaskAddComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

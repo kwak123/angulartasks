@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaskListComponent } from './task-list.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { TaskService } from './services/task.service';
 
 describe('TaskListComponent', () => {
   let component: TaskListComponent;
@@ -12,7 +13,8 @@ describe('TaskListComponent', () => {
       declarations: [
         TaskListComponent,
         TaskDetailComponent
-      ]
+      ],
+      providers: [TaskService]
     })
     .compileComponents();
   }));
